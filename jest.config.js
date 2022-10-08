@@ -9,7 +9,7 @@ module.exports = {
   testEnvironment: 'node',
   collectCoverage: true,
   verbose: true,
-  bail: true,
+  bail: false,
   detectOpenHandles: true,
   coverageDirectory: '../coverage',
   coverageReporters: ['lcov', 'text', 'text-summary'],
@@ -26,5 +26,6 @@ module.exports = {
     'src/main.ts',
     '.*\\.module\\.ts$',
     '.*\\.controller\\.ts$',
+    '.*\\.repository\\.ts$',
   ],
 };
