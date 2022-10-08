@@ -9,9 +9,3 @@ export const fizzBuzz = (n: number): 'Fizz' | 'Buzz' | 'FizzBuzz' | number => {
     return n;
   }
 };
-
-export const generateFizzBuzz = (n: number) => {
-  for (let i = 1; i <= n; i++) {
-    console.log(i, fizzBuzz(i));
-  }
-};

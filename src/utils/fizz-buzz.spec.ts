@@ -1,4 +1,4 @@
-import { fizzBuzz, generateFizzBuzz } from './fizz-buzz';
+import { fizzBuzz } from './fizz-buzz';
 describe('FizzBuzz', () => {
   describe('Numbers divisible by 3 should get Fizz', () => {
     it('3 should get Fizz', () => {
@@ -37,31 +37,6 @@ describe('FizzBuzz', () => {
 
     it('112 should get 112', () => {
       expect(fizzBuzz(112)).toBe(112);
-    });
-  });
-
-  describe('generateFizzBuzz should generate FizzBuzz until given number', () => {
-    let consoleLogSpy: jest.SpyInstance;
-
-    beforeEach(() => {
-      consoleLogSpy = jest.spyOn(console, 'log').mockReturnValue();
-    });
-
-    afterEach(() => {
-      jest.restoreAllMocks();
-    });
-
-    it('generateFizzBuzz should create FizzBuzz sequence of 10', () => {
-      generateFizzBuzz(10);
-
-      expect(consoleLogSpy).toHaveBeenCalledTimes(10);
-      expect(consoleLogSpy).toHaveBeenLastCalledWith(10, 'Buzz');
-    });
-
-    it('generateFizzBuzz should create FizzBuzz sequence of 0', () => {
-      generateFizzBuzz(0);
-
-      expect(consoleLogSpy).not.toHaveBeenCalled();
     });
   });
 });
