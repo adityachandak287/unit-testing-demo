@@ -7,13 +7,12 @@ module.exports = {
     '^.+\\.(t|j)s$': 'ts-jest',
   },
   testEnvironment: 'node',
-  collectCoverageFrom: ['**/*.(t|j)s'],
   collectCoverage: true,
   verbose: true,
-  coverageDirectory: '../coverage',
-  coverageReporters: ['lcov', 'text', 'text-summary'],
   bail: true,
   detectOpenHandles: true,
+  coverageDirectory: '../coverage',
+  coverageReporters: ['lcov', 'text', 'text-summary'],
   coverageThreshold: {
     global: {
       branches: 100,
@@ -22,4 +21,10 @@ module.exports = {
       statements: 100,
     },
   },
+  collectCoverageFrom: ['**/*.(t|j)s'],
+  coveragePathIgnorePatterns: [
+    'src/main.ts',
+    '.*\\.module\\.ts$',
+    '.*\\.controller\\.ts$',
+  ],
 };
