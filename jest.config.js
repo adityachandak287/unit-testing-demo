@@ -27,5 +27,6 @@ module.exports = {
     '.*\\.module\\.ts$',
     '.*\\.controller\\.ts$',
     '.*\\.repository\\.ts$',
+    '.*\\.dto\\.ts$',
   ],
 };
