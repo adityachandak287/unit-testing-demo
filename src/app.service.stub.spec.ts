@@ -2,7 +2,7 @@ import { AppService } from './app.service';
 import { User } from '@prisma/client';
 import { Test, TestingModule } from '@nestjs/testing';
 
-describe.skip('AppService (Stub)', () => {
+describe('AppService (Stub)', () => {
   it('getAllUsers should return all users', async () => {
     class UserClientStub {
       async findMany(): Promise<User[]> {
