@@ -85,7 +85,7 @@ describe('AppService (Mocking)', () => {
 
       await expect(async () => {
         await service.findUserById(1234);
-      }).rejects.toThrow('Not Found');
+      }).rejects.toThrowError(NotFoundException);
 
       expect(mockDbClient.user.findUnique).toHaveBeenCalledTimes(1);
       expect(mockDbClient.user.findUnique).toHaveBeenCalledWith({
@@ -217,7 +217,7 @@ describe('AppService (Mocking)', () => {
 
       await expect(async () => {
         await service.deleteUser(1234);
-      }).rejects.toThrow(NotFoundException);
+      }).rejects.toThrowError(NotFoundException);
 
       expect(mockDbClient.user.deleteMany).toHaveBeenCalledTimes(1);
       expect(mockDbClient.user.deleteMany).toHaveBeenCalledWith({
