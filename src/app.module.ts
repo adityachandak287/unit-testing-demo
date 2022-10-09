@@ -3,7 +3,8 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { PrismaClient, Prisma } from '@prisma/client';
 import { join } from 'path';
-
+import { PaymentService } from './payment.service';
+import { CurrencyRepository } from './repositories/api/currency.repository';
 
 const DB_OPTIONS: Prisma.PrismaClientOptions = {
   datasources: {
@@ -22,6 +23,8 @@ const DB_OPTIONS: Prisma.PrismaClientOptions = {
       useValue: new PrismaClient(DB_OPTIONS),
     },
     AppService,
+    CurrencyRepository,
+    PaymentService,
   ],
 })
 export class AppModule {}

@@ -8,11 +8,16 @@ import {
   Post,
 } from '@nestjs/common';
 import { AppService } from './app.service';
+import { PaymentDTO } from './dto/payment.dto';
 import { CreateUserDTO, UpdateUserDTO, UserIdParamDTO } from './dto/user.dto';
+import { PaymentService } from './payment.service';
 
 @Controller()
 export class AppController {
-  constructor(private readonly appService: AppService) {}
+  constructor(
+    private readonly appService: AppService,
+    private readonly paymentService: PaymentService,
+  ) {}
 
   @Get('/hello')
   getHello() {
@@ -51,5 +56,10 @@ export class AppController {
   @Delete('/:id')
   async deleteUser(@Param() deleteUserPayload: UserIdParamDTO) {
     return this.appService.deleteUser(Number(deleteUserPayload.id));
+  }
+
+  @Post('/pay')
+  async getExchangeRate(@Body() paymentRequest: PaymentDTO) {
+    return this.paymentService.verifyPayment(paymentRequest);
   }
 }
