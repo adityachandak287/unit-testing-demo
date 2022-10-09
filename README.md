@@ -159,3 +159,13 @@ Verify if payment in given currency is valid for given amount in INR
 ```
 
 </details>
+
+## Credits
+
+- [Currency API](https://github.com/fawazahmed0/currency-api)
+
+## Resources
+
+- [Prisma Docs - Testing](https://www.prisma.io/docs/guides/testing/unit-testing)
+- [NestJS Docs - Testing](https://docs.nestjs.com/fundamentals/testing)
+- [Jest Docs](https://jestjs.io/docs/28.x/getting-started)
