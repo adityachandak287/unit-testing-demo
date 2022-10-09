@@ -148,7 +148,7 @@ describe('AppService (Mocking)', () => {
 
       const isUserUpdated = await service.updateUser(789, {});
 
-      expect(isUserUpdated).toEqual(true);
+      expect(isUserUpdated).toEqual({ success: true });
       expect(mockDbClient.user.updateMany).toHaveBeenCalledTimes(1);
       expect(mockDbClient.user.updateMany).toHaveBeenCalledWith({
         where: {
@@ -201,7 +201,7 @@ describe('AppService (Mocking)', () => {
 
       const isUserDeleted = await service.deleteUser(101);
 
-      expect(isUserDeleted).toEqual(true);
+      expect(isUserDeleted).toEqual({ success: true });
       expect(mockDbClient.user.deleteMany).toHaveBeenCalledTimes(1);
       expect(mockDbClient.user.deleteMany).toHaveBeenCalledWith({
         where: {

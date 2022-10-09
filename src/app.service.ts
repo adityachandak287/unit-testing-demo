@@ -44,7 +44,7 @@ export class AppService {
     }
   }
 
-  async updateUser(id: number, user: Prisma.UserUpdateInput): Promise<boolean> {
+  async updateUser(id: number, user: Prisma.UserUpdateInput) {
     let updatedUsers: number;
     try {
       const updateRes = await this.dbClient.user.updateMany({
@@ -62,10 +62,10 @@ export class AppService {
       throw new NotFoundException();
     }
 
-    return updatedUsers === 1;
+    return { success: updatedUsers === 1 };
   }
 
-  async deleteUser(id: number): Promise<boolean> {
+  async deleteUser(id: number) {
     const deletedUsers = await this.dbClient.user.deleteMany({
       where: {
         id,
@@ -76,6 +76,6 @@ export class AppService {
       throw new NotFoundException();
     }
 
-    return deletedUsers.count === 1;
+    return { success: deletedUsers.count === 1 };
   }
 }
