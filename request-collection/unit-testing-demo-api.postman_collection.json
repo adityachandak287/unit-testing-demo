@@ -1,0 +1,577 @@
+{
+	"info": {
+		"_postman_id": "388b5cfd-446b-4c1d-a0a2-de4a284378df",
+		"name": "unit-testing-demo-api",
+		"description": "HAR To Postman Generated Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15078867"
+	},
+	"item": [
+		{
+			"name": "hello-world",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Request-Id",
+						"value": "ad"
+					}
+				],
+				"url": {
+					"raw": "{{BASE_URL}}/hello",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"hello"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "successfully / 200",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Request-Id",
+								"value": "ad"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL1}}/hello",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"hello"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "21"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"15-EaQvO9BMkP2y4qGANP/LFwMMc/I\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 09 Oct 2022 12:15:00 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "application/json; charset=utf-8 content type is not supported in the response body"
+				}
+			]
+		},
+		{
+			"name": "get-all-users",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Request-Id",
+						"value": "ad"
+					}
+				],
+				"url": {
+					"raw": "{{BASE_URL}}",
+					"host": [
+						"{{BASE_URL}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "successfully / 200",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Request-Id",
+								"value": "ad"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL1}}/",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "109"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"6d-CYPJHTzeuoPxdLJwkSINSvhhxbE\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 09 Oct 2022 12:15:05 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "application/json; charset=utf-8 content type is not supported in the response body"
+				}
+			]
+		},
+		{
+			"name": "get-user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/4",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"4"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "successfully / 200",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL1}}/4",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"4"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "57"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"39-ZUct3uC5UbBiWlMJojC9mMoW2ww\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 09 Oct 2022 12:15:14 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "application/json; charset=utf-8 content type is not supported in the response body"
+				}
+			]
+		},
+		{
+			"name": "create-user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"John Doe\",\n    \"email\": \"johndoe2@example.com\"\n}"
+				},
+				"url": {
+					"raw": "{{BASE_URL}}",
+					"host": [
+						"{{BASE_URL}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "created / 201",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL1}}/",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "56"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"38-38SVzHKf2hoiIBo1YBPOx63H2/A\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 09 Oct 2022 12:15:26 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "application/json; charset=utf-8 content type is not supported in the response body"
+				}
+			]
+		},
+		{
+			"name": "update-user",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"John Cena\"\n}"
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/5",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"5"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "successfully / 200",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL1}}/3",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"3"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "16"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"10-oV4hJxRVSENxc/wX8+mA4/Pe4tA\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 09 Oct 2022 12:15:41 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "application/json; charset=utf-8 content type is not supported in the response body"
+				}
+			]
+		},
+		{
+			"name": "delete-user",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/5",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"5"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "successfully / 200",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL1}}/3",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"3"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "16"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"10-oV4hJxRVSENxc/wX8+mA4/Pe4tA\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 09 Oct 2022 12:15:47 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "application/json; charset=utf-8 content type is not supported in the response body"
+				}
+			]
+		},
+		{
+			"name": "verify-payment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"amountPaid\": 1,\n  \"currency\": \"INR\",\n  \"inrToPay\": 1\n}"
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/pay",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"pay"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "created / 201",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL1}}/pay",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"pay"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "16"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"10-oV4hJxRVSENxc/wX8+mA4/Pe4tA\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 09 Oct 2022 12:17:20 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "application/json; charset=utf-8 content type is not supported in the response body"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BASE_URL",
+			"value": "http://localhost:3000",
+			"type": "any"
+		}
+	]
+}
